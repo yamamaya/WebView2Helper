@@ -79,6 +79,12 @@ namespace OaktreeLab.Utils.WebView2Helper {
             return res.HasValue ? res.Value.GetBoolean() : false;
         }
 
+        public async Task<string> GetInnerText() {
+            string script = _script.AppendToTail( ".innerText" ).FinishScript();
+            JsonElement? res = await helper.RunScript( script );
+            return res.HasValue ? res.Value.ToString() ?? "" : "";
+        }
+
         public async Task<string[][]?> ReadTableContents() {
             string script = _script.Append(
                 "Array.prototype.slice.call( ",
