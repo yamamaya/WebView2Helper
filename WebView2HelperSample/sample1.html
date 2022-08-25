@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebView2Helper sample page</title>
+    <style type="text/css">
+        .padded {
+            padding: 5px 0 5px 0;
+        }
+        .bordered {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form1</h1>
+    <form name="form1" id="form1" class="bordered" style="padding:5px" onsubmit="alert('form1 submitted')">
+        <div class="padded">
+            text1: <input type="text" name="text1" id="text1" value="1" />
+        </div>
+        <div class="padded">
+            text2: <input type="text" name="text2" id="text2" value="2" />
+        </div>
+        <div class="padded">
+            text3: <input type="text" name="text3" id="text3" style="background-color:lightskyblue" value="3" />
+        </div>
+        <div class="padded">
+            select1:<select name="select1" id="select1">
+                <option value="1">OPTION1</option>
+                <option value="2">OPTION2</option>
+            </select>
+        </div>
+        <div class="padded">
+            check1:<input type="checkbox" name="check1" id="check1" />
+        </div>
+        <div class="padded">
+            textarea1:<textarea name="textarea1" id="textarea1" cols="40" rows="4" style="vertical-align:top"></textarea>
+        </div>
+        <div class="padded">
+            <input type="submit" id="button1" style="width:10em" />
+            <a id="link1" href="javascript:alert('link1 clicked')">CLICK HERE</a><br />
+        </div>
+    </form>
+    <table border="1" id="table1">
+        <tr>
+            <th>ROW1</th>
+            <td>CELL1-1</td>
+            <td>CELL1-2</td>
+            <td>CELL1-3</td>
+        </tr>
+        <tr>
+            <th>ROW2</th>
+            <td>CELL2-1</td>
+            <td>CELL2-2</td>
+            <td>CELL2-3</td>
+        </tr>
+    </table>
+</body>
+</html>
